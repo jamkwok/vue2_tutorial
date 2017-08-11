@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Vue2</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>
+        {{ title }}
+      </h1>
+      <p v-html="finishedLink"></p>
+    </div>
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          title: 'Hello World!',
+          finishedLink: '<a href="http://google.com">Google</a>'
+        },
+        methods: {
+          sayHello: function(event) {
+            return this.title;
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
