@@ -10,20 +10,20 @@
       <h1>
         {{ title }}
       </h1>
+      <button v-on:click="increase">PlusOne</button>
       <p>
-        {{ sayHello() }} - <a v-bind:href="link">google.com</a>
+        {{ counter }}
       </p>
     </div>
     <script>
       var app = new Vue({
         el: '#app',
         data: {
-          title: 'Hello World!',
-          link: 'http://google.com'
+          counter: 0
         },
         methods: {
-          sayHello: function(event) {
-            return this.title;
+          increase: function() {
+            this.counter++;
           }
         }
       })
