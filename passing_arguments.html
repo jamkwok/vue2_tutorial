@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Vue2</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+      <button v-on:click="increase(3)">PlusOne</button>
+      <p>
+        {{ counter }}
+      </p>
+    </div>
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          counter: 0
+        },
+        methods: {
+          increase: function(step) {
+            this.counter += step;
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
