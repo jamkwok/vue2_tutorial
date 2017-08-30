@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Vue2</title>
+    <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p v-on:mousemove="updateCoordinates">Coordinates: {{x}} / {{y}} </p>
+    </div>
+    <script>
+      var app = new Vue({
+        el: '#app',
+        data: {
+          x: 0,
+          y: 0
+        },
+        methods: {
+          updateCoordinates: function(event) {
+            this.x = event.clientX;
+            this.y = event.clientY;
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
